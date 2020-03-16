@@ -23,6 +23,59 @@ void check(char* name, int N)
     } else {
        printf("Wrong Figure! \n");
     }
+if ((int)A[N][1] == 1) { 
+        A[N][2] = 0;
+        A[N][3] = 0;
+        A[N][4] = 0;
+        Y = 0;
+        M = 1;
+        for (int i = k + 1; (float)name[i] > 45 && (float)name[i] < 58; i++) { 
+            k = i + 1;
+            if (name[i] > 47) {
+                A[N][2] = A[N][2] * 10 + (float)name[i] - 48;
+                M /= 10;
+            } else {
+                Y = 1;
+                M = 1;
+            }
+        }
+        if (Y == 1) {
+            A[N][2] = A[N][2] * M;
+        }
+        Y = 0;
+        M = 1;
+        for (int i = k + 1; (float)name[i] > 45 && (float)name[i] < 58; i++) { 
+            k = i + 1;
+            if (name[i] > 47) {
+                A[N][3] = A[N][3] * 10 + (float)name[i] - 48;
+                M /= 10;
+            } else {
+                Y = 1;
+                M = 1;
+            }
+        }
+        if (Y == 1) {
+            A[N][3] = A[N][3] * M;
+        }
+        Y = 0;
+        M = 1;
+        for (int i = k + 2; (float)name[i] > 45 && (float)name[i] < 58; i++) { 
+            k = i + 1;
+            if (name[i] > 47) {
+                A[N][4] = A[N][4] * 10 + (float)name[i] - 48;
+                M /= 10;
+            } else {
+                Y = 1;
+                M = 1;
+            }
+        }
+        if (Y == 1) {
+            A[N][4] = A[N][4] * M;
+        }
+        Y = 0;
+        M = 1;
+    }
+}
 
 int main()
 {
