@@ -7,6 +7,23 @@
 float A[5][5];
 int intersects[5][5];
 
+void intersect(int N)
+{
+    float total, distance;
+    for (int i = 0; i < N - 1; i++) {  
+        for (int j = i + 1; j < N; j++) {
+            total = A[i][4] + A[j][4];
+            distance
+                    = sqrt((A[j][2] - A[i][2]) * (A[j][2] - A[i][2])
+                           + (A[j][3] - A[i][3]) * (A[j][3] - A[i][3]));
+            if (distance < total) {
+                intersects[i][j] = 1;
+                intersects[j][i] = 1;
+            }
+        }
+    }
+}
+
 void check(char* name, int N)
 {
     int k = 0, Y = 0;
