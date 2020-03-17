@@ -1,4 +1,3 @@
-#include <iostream>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -141,6 +140,5 @@ int main()
             printf("WRONG FIGURE!\n");
         }
     }
-    system("PAUSE");
     return 0;
 }
