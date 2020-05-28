@@ -28,7 +28,7 @@ void check(char* name, int N)
     int k = 0, Y = 0;
     float M = 1;
     for (int i = 0; name[i] != '('; i++) {
-        k = i + 1;
+        k = i + 1; 
     }
     char copy[k];
     for (int i = 0; i < k; i++) {
@@ -93,6 +93,16 @@ void check(char* name, int N)
     }
 }
 
+float Perimeter(int A) {
+	float p=2*3.14*A;
+return p;	
+}
+
+float Area(int A) {
+	float a=3.14*A*A;
+return a;
+}
+
 int main()
 {
     int N = 0, stop = 0;
@@ -123,8 +133,8 @@ int main()
                    A[i][2],
                    A[i][3],
                    A[i][4]);
-            S[i] = 3.14 * A[i][4] * A[i][4];
-            P[i] = 2 * 3.14 * A[i][4];
+            S[i] = Area(A[i][4]);
+            P[i] = Perimeter(A[i][4]);
             printf(" perimeter = %.3f\n area = %.3f\n intersects:\n",
                    P[i],
                    S[i]);
