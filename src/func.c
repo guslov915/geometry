@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void intersect(int N)
+void intersect(int N, float (*A)[5], int (*intersects)[5])
 {
     float total, distance;
     for (int i = 0; i < N - 1; i++) {
@@ -20,7 +20,7 @@ void intersect(int N)
     }
 }
 
-void check(char* name, int N)
+void check(char* name, int N, float (*A)[5])
 {
     int k = 0, Y = 0;
     float M = 1;

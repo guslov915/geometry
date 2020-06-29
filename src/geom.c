@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "func.h"
 
 float A[5][5];
 int intersects[5][5];
@@ -20,7 +21,7 @@ int main()
                 break;
             }
         }
-        check(name, N);
+        check(name, N, A);
         N++;
     } while (stop == 0);
     for (int i = 0; i < N - 1; i++) {
@@ -28,7 +29,7 @@ int main()
             intersects[i][j] = 0;
         }
     }
-    intersect(N - 1);
+    intersect(N - 1, A, intersects);
     for (int i = 0; i < N - 1; i++) {
         if ((int)A[i][1] == 1) {
             printf("%d. circle(%.2f %.2f, %.2f)\n",
