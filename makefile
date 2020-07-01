@@ -1,5 +1,5 @@
 all: ./bin/geom ./bin/test	
-test: ./bin/test
+test: ./bin/test	
 
 ./bin/test: ./build/test/main.o ./build/src/func.o ./build/test/func_test.o
 	g++ -Wall -Werror -o ./bin/test ./build/test/main.o ./build/src/func.o ./build/test/func_test.o -lm
