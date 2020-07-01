@@ -1,4 +1,4 @@
-language: c
+language: c++
 
 script:
   - make
@@ -6,6 +6,6 @@ script:
   - git ls-files test/ | xargs clang-format -i && git diff --exit-code
 
 
-compiler: gcc
+compiler: g++
 
 dist: xenial
