@@ -1,6 +1,10 @@
 #define CTEST_MAIN
-
-#include <ctest.h>
+#include "../src/func.h"
+#include "../thirdparty/ctest.h"
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, const char** argv)
 {
